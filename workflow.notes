@@ -1,0 +1,18 @@
+Image read and access workflow:
+Steps used to access, read and render the assets after they have been uploaded to IPFS 
+
+1) once data is uploaded it's just a matter of reading from the same contract 
+    - Think of the image contract as the 'key/id' to the contract definition on Dash Platform. 
+    - If you want to search for x information on multiple users you won't be able to do that if each user generates their own contract. 
+    - When they use the same contract id/key you can.
+
+2) 'transitions' key contains documents matching your requirements. 
+    - 'transitions[0].ipfs.image' contains the IPFS hash key of the file you uploaded. 
+    - that key is also just a lookup for the actual file you uploaded. 
+
+3) Once you have the IPFS hash you need to load it using 
+    - https://www.ipfs.io/ipfs/(enter-key-here)
+    - https://cloudflare-ipfs.com/ipfs/(enter-key-here)
+
+https://www.ipfs.io/ipfs/3DjkgZm3gWdVynwUx7SmqppnJLfrcA8qNUL5EMEQVX
+https://cloudflare-ipfs.com/ipfs/QmXh3DjkgZm3gWdVynwUx7SmqppnJLfrcA8qNUL5EMEQVX
